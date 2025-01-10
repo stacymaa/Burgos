@@ -1,5 +1,106 @@
+:root {
+  --open-sans: "Open Sans", serif;
+  --nunito-sans: "Nunito Sans", serif;
+
+  --accent-light: #fbb731;
+  --accent-dark: #f37335;
+  --dark: #443737;
+  --light: #ffffff;
+}
+
 body {
-  font-family: "Open Sans", serif;
-  /* font-family: "Nunito Sans", serif; 
-  сразу из Google Fonts сохраняем еще один нужный шрифт, чтобы потом не искать, поэтому пока комментим его */
+  font-family: var(--open-sans);
+}
+
+.container {
+  width: 100%;
+  max-width: 1182px;
+  margin: 0 auto;
+  /* добавляем padding справа и слева, чтобы в мобильной версии контент не прилипал по краям -> */
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  /* с помощью flex расставляем элементы (логотип, nav, корзина)-> */
+  display: flex;
+  align-items: center;
+  gap: 196px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.logo {
+  display: block;
+  width: 176px;
+  height: 56px;
+  background-image: url(../images/logo.svg);
+  /* чтобы картинка не дублировалась -> */
+  background-repeat: no-repeat;
+  /* для работы с адаптивом -> */
+  background-size: contain;
+}
+
+.nav {
+  /* равномерно распределяем пространство между элементами ->  */
+  flex-grow: 1;
+  /* с помощью flex расставляем 4 элемента внутри nav ->  */
+  display: flex;
+  gap: 46px;
+}
+
+.nav-link {
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* добавляем подчеркивание для элементов nav с помощью ::after - тут подчеркивание прозрачное, чтобы цвет появлялся только при наведении курсора -> */
+.nav-link::after {
+  /* без content не будет работать псевдоэлемент -> */
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  border-radius: 1.5px;
+}
+/* добавляем цвет для подчеркиваний элементов nav -> */
+.nav-link:hover::after {
+  background-color: var(--accent-light);
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* добавляем иконку корзины через ::before -> */
+.cart::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 26px;
+  background-image: url(../images/cart.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.cart-count {
+  /* делаем круглым элемент с цифрой -> */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  /* просто стилизуем элемент -> */
+  width: 17px;
+  height: 17px;
+  font-size: 10px;
+  color: var(--light);
+  background-color: var(--accent-dark);
 }
