@@ -6,20 +6,28 @@
   --accent-dark: #f37335;
   --dark: #443737;
   --light: #ffffff;
+  --light-rgb: 255, 255, 255;
 }
 
 body {
   font-family: var(--open-sans);
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
+  /* чтобы контент не выходил за пределы определенной ширины -> */
   width: 100%;
   max-width: 1182px;
   margin: 0 auto;
-  /* добавляем padding справа и слева, чтобы в мобильной версии контент не прилипал по краям -> */
+  /* чтобы в мобильной версии контент не прилипал по краям -> */
   padding-left: 15px;
   padding-right: 15px;
 }
+
+/* Header */
 
 .header {
   /* с помощью flex расставляем элементы (логотип, nav, корзина)-> */
@@ -51,7 +59,6 @@ body {
 
 .nav-link {
   color: var(--dark);
-  text-decoration: none;
   font-size: 20px;
   font-weight: 600;
 }
@@ -75,9 +82,10 @@ body {
   align-items: center;
   gap: 10px;
   color: var(--dark);
-  text-decoration: none;
   font-size: 15px;
   font-weight: 700;
+  /* чтобы разместить card-count на иконке корзины -> */
+  position: relative;
 }
 
 /* добавляем иконку корзины через ::before -> */
@@ -92,15 +100,90 @@ body {
 }
 
 .cart-count {
-  /* делаем круглым элемент с цифрой -> */
+  /* делаем элемент с цифрой круглым -> */
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 100%;
-  /* просто стилизуем элемент -> */
+  /* стилизуем элемент -> */
   width: 17px;
   height: 17px;
   font-size: 10px;
   color: var(--light);
   background-color: var(--accent-dark);
+  /* размещаем элемент на иконке корзины -> */
+  position: absolute;
+  left: 17px;
+  bottom: 0;
+}
+
+/* Hero */
+
+.hero {
+  background-image: url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  /* чтобы подстраивался под ширину -> */
+  background-size: cover;
+  /* центрируем фон, так как экран может быть слишком широким или слишком узким - чтобы контент был по центру ->  */
+  background-position: center center;
+  text-align: center;
+  /* чтобы расширить блок -> */
+  padding-top: 142px;
+  padding-bottom: 142px;
+}
+
+.breadcrumbs {
+  /* чтобы поставить в одну линию -> */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  /* убираем точки пунктов */
+  list-style-type: none;
+  /* убираем padding слева, чтобы выравнить элемент по центру -> */
+  padding-left: 0;
+  color: rgba(var(--light-rgb), 0.5);
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* чтобы отодвинуть слэш / вправо -> */
+.breadcrumbs-item {
+  position: relative;
+}
+
+/* добавляем слэш / в breadcrumbs между Главная и Меню - применяем это для всех элементов, кроме последнего - ставим / после с помощью ::after -> */
+.breadcrumbs-item:not(:last-child)::after {
+  content: "/";
+  /* отодвигаем слэш / вправо, т.к. изначально он вплотную к тексту Главная -> */
+  position: absolute;
+  right: -12px;
+}
+
+.breadcrumbs-link {
+  color: rgba(var(--light-rgb), 0.5);
+}
+
+.breadcrumbs-link:hover {
+  color: var(--accent-light);
+}
+
+.hero-title {
+  font-family: var(--nunito-sans);
+  font-size: 79px;
+  font-weight: 700;
+  color: var(--light);
+  /* чтобы все первые буквы были заглавные -> */
+  text-transform: capitalize;
+}
+
+.hero-description {
+  /* когда применяем такое свойство на блок, он автоматически хочет уйти влево, поэтому центрируем с помощью margin -> */
+  max-width: 320px;
+  margin: 0 auto;
+  color: rgba(var(--light-rgb), 0.8);
+  font-size: 15px;
+  /* в процентах значение адаптивное -> */
+  line-height: 160%;
 }
