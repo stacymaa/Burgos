@@ -30,6 +30,10 @@ a {
 /* Header */
 
 .header {
+  border-bottom: 1px solid #dedede;
+}
+
+.header-wrapper {
   /* с помощью flex расставляем элементы (логотип, nav, корзина)-> */
   display: flex;
   align-items: center;
@@ -54,7 +58,7 @@ a {
   flex-grow: 1;
   /* с помощью flex расставляем 4 элемента внутри nav ->  */
   display: flex;
-  gap: 46px;
+  gap: 47px;
 }
 
 .nav-link {
@@ -176,6 +180,8 @@ a {
   color: var(--light);
   /* чтобы все первые буквы были заглавные -> */
   text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 18px;
 }
 
 .hero-description {
@@ -186,4 +192,67 @@ a {
   font-size: 15px;
   /* в процентах значение адаптивное -> */
   line-height: 160%;
+}
+
+/* Banner */
+
+.banner {
+  margin-top: 140px;
+  margin-bottom: 50px;
+}
+
+.banner-wrapper {
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 100px;
+}
+
+.banner-title {
+  margin: 0 auto;
+}
+
+.banner-title:not(span) {
+  font-family: var(--nunito-sans);
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--light);
+}
+
+.banner-title span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--light);
+  background-color: var(--accent-dark);
+  width: 95px;
+  display: block;
+  border-radius: 14px;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.banner-description {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: rgba(var(--light-rgb), 0.8);
+}
+
+.banner-btn {
+  font-family: var(--nunito-sans);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--dark);
+  background-color: var(--accent-light);
+  width: 170px;
+  height: 58px;
+  border-radius: 5px;
+  border: var(--accent-light);
+  text-align: center;
 }
