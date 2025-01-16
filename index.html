@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="header">
-      <!-- container - чтобы контент не вылезал за определенную логическую ширину -->
+      <!-- container - чтобы контент не вылезал за определенную логическую ширину -> -->
       <div class="container">
         <div class="header-wrapper">
           <div class="logo"></div>
@@ -51,12 +51,88 @@
         <div class="banner-wrapper">
           <h2 class="banner-title"><span>Скидка</span>-30%</h2>
           <p class="banner-description">
-            Только при&nbsp;покупке 3-х и более позиций,<br />
-            мы дарим скидку. Акции не&nbsp;суммируются.
+            Только при&nbsp;покупке 3-х и более позиций, мы дарим скидку. Акции
+            не&nbsp;суммируются.
           </p>
-          <button class="banner-btn">Купить сейчас</button>
+          <button type="button" class="banner-btn">Купить сейчас</button>
         </div>
       </div>
     </section>
+    <!-- для двух блоков в main зададим одинаковую структуру (поэтому создаем две секции) -> -->
+    <main>
+      <section>
+        <div class="container">
+          <div class="menu">
+            <div class="menu-header">
+              <h2 class="menu-title">Бургеры</h2>
+              <select name="" id="" class="menu-select">
+                <option value="Сортировать" disabled selected>
+                  Сортировать
+                </option>
+                <option value="По умолчанию">По умолчанию</option>
+                <option value="По возрастанию цены">По возрастанию цены</option>
+                <option value="По убыванию цены">По убыванию цены</option>
+              </select>
+            </div>
+            <div class="menu-box">
+              <!-- это у нас конкретно одна ячейка, карточка одного товара -> -->
+              <div class="menu-item">
+                <div class="menu-thumb">
+                  <img src="images/menu/01.jpeg" alt="Острый бургер" />
+                </div>
+                <h3 class="menu-name">Острый бургер</h3>
+                <p class="menu-price">$26</p>
+                <button type="button" class="menu-btn">Купить</button>
+              </div>
+              <div class="menu-item">
+                <div class="menu-thumb">
+                  <img src="images/menu/02.jpeg" alt="Острый бургер" />
+                </div>
+                <h3 class="menu-name">Гриль бургер</h3>
+                <p class="menu-price">$16</p>
+                <button type="button" class="menu-btn">Купить</button>
+              </div>
+              <div class="menu-item">
+                <div class="menu-thumb">
+                  <img src="images/menu/03.jpeg" alt="Острый бургер" />
+                </div>
+                <h3 class="menu-name">Бургер гигант</h3>
+                <p class="menu-price">$37</p>
+                <button type="button" class="menu-btn">Купить</button>
+              </div>
+              <div class="menu-item">
+                <div class="menu-thumb">
+                  <img src="images/menu/04.jpeg" alt="Острый бургер" />
+                </div>
+                <h3 class="menu-name">Бургер с курицей</h3>
+                <p class="menu-price">$18</p>
+                <button type="button" class="menu-btn">Купить</button>
+              </div>
+              <div class="menu-item">
+                <div class="menu-thumb">
+                  <img src="images/menu/05.jpeg" alt="Острый бургер" />
+                </div>
+                <h3 class="menu-name">Бургер с курицей</h3>
+                <p class="menu-price">$9</p>
+                <button type="button" class="menu-btn">Купить</button>
+              </div>
+              <div class="menu-item">
+                <div class="menu-thumb">
+                  <img src="images/menu/06.jpeg" alt="Острый бургер" />
+                </div>
+                <h3 class="menu-name">Тройной бургер</h3>
+                <p class="menu-price">$7</p>
+                <button type="button" class="menu-btn">Купить</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <div class="menu"></div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
