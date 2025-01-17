@@ -276,12 +276,12 @@ a {
 }
 
 .menu-title {
-  font-size: var(--nunito-sans);
+  font-family: var(--nunito-sans);
   font-size: 44px;
-  font-style: 700;
+  font-weight: 700;
   color: var(--dark);
   text-transform: uppercase;
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 0;
 }
 
@@ -295,7 +295,7 @@ a {
   height: 44px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 30px;
+  padding-left: 25px;
   margin-top: 6px;
 }
 
@@ -367,7 +367,7 @@ a {
   display: block;
   width: 18px;
   height: 18px;
-  background-image: url(/images/menu/cart-menu.svg);
+  background-image: url(../images/menu/cart-menu.svg);
   background-repeat: no-repeat;
   background-size: contain;
   padding-right: 5px;
