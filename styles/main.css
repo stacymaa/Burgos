@@ -8,6 +8,7 @@
   --light: #ffffff;
   --dark-rgb: 68, 55, 55;
   --light-rgb: 255, 255, 255;
+  --line: #dedede;
 }
 
 body {
@@ -31,7 +32,7 @@ a {
 /* Header */
 
 .header {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid var(--line);
 }
 
 .header-wrapper {
@@ -256,7 +257,7 @@ a {
   text-decoration: none;
   color: var(--dark);
   background-color: var(--accent-light);
-  border: var(--accent-light);
+  border: none;
   border-radius: 5px;
   padding: 21px 25px;
 }
@@ -272,13 +273,14 @@ a {
   align-items: center;
   justify-content: space-between;
   margin-top: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 }
 
 .menu-title {
   font-family: var(--nunito-sans);
   font-size: 44px;
   font-weight: 700;
+  /* line-height: 127%; */
   color: var(--dark);
   text-transform: uppercase;
   margin-top: 5px;
@@ -288,15 +290,26 @@ a {
 .menu-select {
   font-size: 15px;
   font-weight: 400;
-  border: 1px solid #dedede;
-  padding: 5px 30px 5px 10px;
+  color: var(--dark);
+  border: 1px solid var(--line);
   border-radius: 22px;
-  width: 279px;
+  /* сбрасываем стили по умолчанию (стрелку у select) -> */
+  appearance: none;
+  /* 1-ый вариант как задать размер -> */
+  flex-basis: 279px;
+  padding: 13px 30px;
+  /* 2-ой вариант как задать размер -> */
+  /* width: 279px;
   height: 44px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 25px;
-  margin-top: 6px;
+  padding-left: 30px; */
+  margin-top: 5px;
+  background-image: url(../images/menu/chevron-down.svg);
+  background-size: 14px 10px;
+  background-repeat: no-repeat;
+  /* 1-ый вариант как задать положение стрелке -> */
+  background-position: 89% center;
+  /* 2-ой вариант как задать положение стрелке -> */
+  /* background-position: right 29px center; */
 }
 
 .menu-box {
@@ -306,6 +319,11 @@ a {
   gap: 50px 20px;
 }
 
+.menu-item {
+  font-family: var(--nunito-sans);
+  text-align: center;
+}
+
 /* настроим, чтобы изображение всегда было нужного размера - ширину трогать не будем, т.к. с помощью grid у нас и так она будет автоматически подстраиваться ->  */
 .menu-thumb {
   width: 100%;
@@ -313,6 +331,7 @@ a {
   /* будем использовать для внутреннего img -> */
   position: relative;
   overflow: hidden;
+  margin-bottom: 22px;
 }
 
 .menu-thumb img {
@@ -328,38 +347,38 @@ a {
 }
 
 .menu-name {
-  font-family: var(--nunito-sans);
   font-size: 30px;
   font-weight: 600;
   color: var(--dark);
-  text-align: center;
-  margin-top: 23px;
-  margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .menu-price {
-  font-family: var(--nunito-sans);
   font-size: 20px;
   font-weight: 700;
   color: rgba(var(--dark-rgb), 0.5);
-  text-align: center;
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
 
 .menu-btn {
   font-family: var(--nunito-sans);
   font-size: 14px;
   font-weight: 700;
-  color: var(--dark);
+  color: #1e2f40;
   background-color: var(--accent-light);
-  border: var(--accent-light);
-  text-transform: uppercase;
+  border: none;
   border-radius: 5px;
-  padding: 10px 50px 10px 25px;
-  display: flex;
+  text-transform: uppercase;
+  text-decoration: none;
   margin: 0 auto;
+  padding: 11px 36px 11px 28px;
+  display: flex;
   align-items: center;
   justify-content: center;
+  /* раздвигаем значок с текстом -> */
+  gap: 10px;
 }
 
 .menu-btn::before {
@@ -371,4 +390,12 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   padding-right: 5px;
+}
+
+.menu-header-additionally {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 95px;
+  margin-bottom: 35px;
 }
