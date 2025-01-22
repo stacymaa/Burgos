@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="headerTop">
       <!-- container - чтобы контент не вылезал за определенную логическую ширину -> -->
       <div class="container">
         <div class="header-wrapper">
@@ -54,13 +54,13 @@
             Только при&nbsp;покупке 3-х и более позиций, мы дарим скидку. Акции
             не&nbsp;суммируются.
           </p>
-          <button type="button" class="banner-btn">Купить сейчас</button>
+          <a href="#menuBurger" class="banner-btn">Купить сейчас</a>
         </div>
       </div>
     </section>
     <!-- для двух блоков в main зададим одинаковую структуру (поэтому создаем две секции) -> -->
     <main>
-      <section>
+      <section id="menuBurger">
         <div class="container">
           <div class="menu">
             <div class="menu-header">
@@ -195,5 +195,7 @@
         </div>
       </div>
     </footer>
+    <a href="#headerTop" class="button-up" id="btnUp">Наверх</a>
+    <script src="scripts/script.js"></script>
   </body>
 </html>

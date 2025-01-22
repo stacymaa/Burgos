@@ -126,6 +126,36 @@ a {
   bottom: 0;
 }
 
+.button-up {
+  font-family: var(--nunito-sans);
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--dark);
+  background-color: var(--accent-light);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  transition: var(--tr);
+  text-align: center;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.button-up:hover {
+  background-color: var(--accent-dark);
+}
+
+.button-up.hidden {
+  opacity: 0;
+}
+
+.button-up.visible {
+  opacity: 1;
+}
+
 /* Hero */
 
 .hero {
@@ -266,8 +296,11 @@ a {
   background-color: var(--accent-light);
   border: none;
   border-radius: 5px;
-  padding: 21px 25px;
+  padding: 21px 0;
   transition: var(--tr);
+  display: block;
+  text-align: center;
+  max-width: 170px;
 }
 
 .banner-btn:hover {
