@@ -280,7 +280,6 @@ a {
   font-family: var(--nunito-sans);
   font-size: 44px;
   font-weight: 700;
-  /* line-height: 127%; */
   color: var(--dark);
   text-transform: uppercase;
   margin-top: 5px;
@@ -404,13 +403,14 @@ a {
 
 .footer {
   background-color: #1e2f40;
+  padding-top: 117px;
+  padding-bottom: 120px;
   margin-top: 140px;
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 117px;
 }
 
 .footer-logo {
@@ -420,7 +420,6 @@ a {
   background-image: url(../images/logo-light-min.svg);
   background-repeat: no-repeat;
   background-size: contain;
-  margin-bottom: 230px;
 }
 
 .footer-title {
@@ -433,13 +432,20 @@ a {
   margin-bottom: 23px;
 }
 
-.footer-nav-link {
+/* 1-ый вариант оформления списка ссылок -> */
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-link {
   font-size: 15px;
   font-weight: 400;
   color: rgba(var(--light-rgb), 0.9);
-  text-decoration: none;
-  display: block;
-  padding-bottom: 16px;
+  /* 2-ой вариант оформления списка ссылок -> */
+  /* display: block;
+  padding-bottom: 16px;  */
 }
 
 .footer-list {
@@ -449,16 +455,17 @@ a {
   color: var(--light);
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .footer-list span {
-  font-size: 15px;
   font-weight: 400;
   color: rgba(var(--light-rgb), 0.9);
+  display: block;
 }
 
-.footer-list li {
-  padding-bottom: 12px;
+.footer-list-item:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 .footer-tel {
@@ -466,6 +473,10 @@ a {
   font-size: 20px;
   font-weight: 800;
   color: var(--accent-light);
+  text-transform: uppercase;
   display: block;
-  padding-bottom: 15px;
+}
+
+.footer-tel:not(:first-child) {
+  padding-top: 15px;
 }
