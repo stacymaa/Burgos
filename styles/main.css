@@ -9,6 +9,8 @@
   --dark-rgb: 68, 55, 55;
   --light-rgb: 255, 255, 255;
   --line: #dedede;
+
+  --tr: 0.2s;
 }
 
 body {
@@ -77,6 +79,7 @@ a {
   height: 3px;
   background-color: transparent;
   border-radius: 1.5px;
+  transition: var(--tr);
 }
 /* добавляем цвет для подчеркиваний элементов nav -> */
 .nav-link:hover::after {
@@ -260,6 +263,7 @@ a {
   border: none;
   border-radius: 5px;
   padding: 21px 25px;
+  transition: var(--tr);
 }
 
 .banner-btn:hover {
@@ -378,6 +382,7 @@ a {
   justify-content: center;
   /* раздвигаем значок с текстом -> */
   gap: 10px;
+  transition: var(--tr);
 }
 
 .menu-btn::before {
@@ -389,6 +394,10 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   padding-right: 5px;
+}
+
+.menu-btn:hover {
+  background-color: var(--accent-dark);
 }
 
 .menu-header-additionally {
@@ -443,9 +452,14 @@ a {
   font-size: 15px;
   font-weight: 400;
   color: rgba(var(--light-rgb), 0.9);
+  transition: var(--tr);
   /* 2-ой вариант оформления списка ссылок -> */
   /* display: block;
   padding-bottom: 16px;  */
+}
+
+.footer-link:hover {
+  color: var(--accent-light);
 }
 
 .footer-list {
@@ -475,8 +489,13 @@ a {
   color: var(--accent-light);
   text-transform: uppercase;
   display: block;
+  transition: var(--tr);
 }
 
 .footer-tel:not(:first-child) {
   padding-top: 15px;
+}
+
+.footer-tel:hover {
+  color: var(--accent-dark);
 }
