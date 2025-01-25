@@ -29,6 +29,8 @@ a {
   /* чтобы в мобильной версии контент не прилипал по краям -> */
   padding-left: 15px;
   padding-right: 15px;
+  /* без этого свойства слишком рано появляется горизонтальный скролл -> */
+  box-sizing: border-box;
 }
 
 /* Header */
@@ -41,9 +43,22 @@ a {
   /* с помощью flex расставляем элементы (логотип, nav, корзина)-> */
   display: flex;
   align-items: center;
-  gap: 196px;
+  /* при таком варианте плохо работает адаптивность, поэтому делаем gap меньше и добавляем margin-left:min() в .nav -> */
+  /* gap: 196px; */
+  gap: 56px;
   padding-top: 26px;
   padding-bottom: 26px;
+}
+
+.burger-menu {
+  display: none;
+  width: 34px;
+  height: 22px;
+  background-image: url(../images/burger-menu.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  border: none;
 }
 
 .logo {
@@ -63,6 +78,7 @@ a {
   /* с помощью flex расставляем 4 элемента внутри nav ->  */
   display: flex;
   gap: 47px;
+  margin-left: min(10vw, 140px);
 }
 
 .nav-link {
@@ -457,6 +473,8 @@ a {
 .footer-wrapper {
   display: flex;
   justify-content: space-between;
+  /* чтобы при адаптиве элементы не слипались -> */
+  gap: 15px;
 }
 
 .footer-logo {
@@ -519,12 +537,18 @@ a {
   margin-bottom: 14px;
 }
 
+/* чтобы номера телефонов не переносились на вторую строку -> */
+.footer-item:last-child {
+  flex-basis: 194px;
+}
+
 .footer-tel {
   font-family: var(--nunito-sans);
   font-size: 20px;
   font-weight: 800;
   color: var(--accent-light);
   text-transform: uppercase;
+  text-align: right;
   display: block;
   transition: var(--tr);
 }
@@ -535,6 +559,10 @@ a {
 
 .footer-tel:hover {
   color: var(--accent-dark);
+}
+
+.footer-tel._mobile {
+  display: none;
 }
 
 /* Contacts */
@@ -636,3 +664,91 @@ a {
 .contact-tel:hover {
   color: var(--accent-light);
 }
+
+/* Media */
+
+@media (max-width: 1080px) {
+  .header-wrapper {
+    gap: 40px;
+  }
+  .nav {
+    margin-left: 0;
+    gap: min(3vw, 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 150px;
+    height: 48px;
+  }
+  .header-wrapper {
+    gap: 45px;
+  }
+  .nav {
+    gap: 22px;
+  }
+  .banner {
+    margin-top: 72px;
+  }
+  .banner-wrapper {
+    padding: 100px 40px;
+  }
+  .menu-header {
+    margin-top: 80px;
+  }
+  /* ниже делаем, чтобы доп меню было в столбик -> */
+  .menu-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .menu-box._additionally {
+    grid-template-columns: 1fr;
+  }
+  .menu-item._additionally {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .menu-item._additionally .menu-thumb {
+    flex-basis: calc(60% - 20px);
+    height: 260px;
+    margin-bottom: 0;
+  }
+  .menu-item._additionally .menu-info {
+    flex-basis: 40%;
+  }
+  .footer {
+    margin-top: 62px;
+    margin-bottom: 71px;
+  }
+  .footer-nav {
+    margin-bottom: 20px;
+  }
+  /* тут заканчиваем, чтобы доп меню было в столбик */
+  /* ниже делаем, чтобы номера телефонов переносились вниз -> */
+  .footer-item:last-child {
+    display: none;
+  }
+  .footer-tel._mobile {
+    display: block;
+    text-align: left;
+  }
+}
+
+/* @media (max-width: 730px) {
+  .header-wrapper {
+    gap: 21px;
+  }
+  .nav {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+  }
+  /* растягиваем элемент с помощью flex-grow, так как этот элемент дочерний -> */
+/* .logo {
+    width: 116px;
+    height: 37px;
+    flex-grow: 1;
+  }
+} */
