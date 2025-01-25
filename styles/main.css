@@ -57,6 +57,7 @@ a {
   background-image: url(../images/burger-menu.svg);
   background-repeat: no-repeat;
   background-size: contain;
+  /* указываем прозрачный background-color и отсутствие границы, так как для тэга button автоматически идет фон и граница -> */
   background-color: transparent;
   border: none;
 }
@@ -203,6 +204,7 @@ a {
   padding-left: 0;
   color: rgba(var(--light-rgb), 0.5);
   font-size: 15px;
+  font-weight: 400px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -735,20 +737,81 @@ a {
   }
 }
 
-/* @media (max-width: 730px) {
+@media (max-width: 730px) {
   .header-wrapper {
     gap: 21px;
+    padding-top: 19px;
+    padding-bottom: 19px;
   }
   .nav {
+    display: none;
+  }
+  .nav._modal {
+    display: flex;
+    flex-direction: column;
+  }
+  /* так как в мобильных устройствах нет функции hover -> */
+  .nav-link::after {
     display: none;
   }
   .burger-menu {
     display: block;
   }
   /* растягиваем элемент с помощью flex-grow, так как этот элемент дочерний -> */
-/* .logo {
+  .logo {
     width: 116px;
     height: 37px;
     flex-grow: 1;
   }
-} */
+  /* модальное выпадающее окно с меню -> */
+  .modal {
+    background-color: #fff8dc;
+    padding: 40px 15px;
+    position: absolute;
+    top: 0;
+    /* выставляем этот блок по центру страницы -> */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    /* тут заканчиваем выставлять этот блок по центру страницы -> */
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: var(--tr);
+  }
+  .modal-close {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/close.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .hero {
+    padding-top: 55px;
+    padding-bottom: 55px;
+    justify-content: center;
+  }
+  .breadcrumbs {
+    font-size: 14px;
+  }
+  .hero-title {
+    font-size: 38px;
+    margin-top: 22px;
+    margin-bottom: 8px;
+  }
+  .hero-description {
+    font-size: 14px;
+  }
+  .banner-wrapper {
+    padding: 35px 85px 34px 17px;
+  }
+  .banner-description {
+    font-size: 14px;
+  }
+}
