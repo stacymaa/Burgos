@@ -671,7 +671,7 @@ a {
 /* Modal */
 
 .modal {
-  display: none;
+  top: -400px;
 }
 
 /* Media */
@@ -776,7 +776,7 @@ a {
     padding: 40px 15px;
     box-sizing: border-box;
     position: absolute;
-    top: 0;
+    top: -400px;
     /* выставляем этот блок по центру страницы -> */
     left: 0;
     right: 0;
