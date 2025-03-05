@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- для отображения иконки на вкладке -> -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- для отображения иконки в поисковике -> -->
     <link type="image/x-icon" href="images/favicon.ico" rel="shortcut icon" />
     <title>Burgos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,8 +26,8 @@
           <div class="logo"></div>
           <nav class="nav">
             <a href="#" class="nav-link">Главная</a>
-            <a href="index.html" class="nav-link">Меню</a>
-            <a href="#" class="nav-link">О нас</a>
+            <a href="#menuBurger" class="nav-link">Меню</a>
+            <a href="#footerBurger" class="nav-link">О нас</a>
             <a href="contact.html" class="nav-link">Контакты</a>
           </nav>
           <a href="#" class="cart">
@@ -183,14 +185,14 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="footerBurger">
       <div class="container">
         <div class="footer-wrapper">
           <div class="footer-logo"></div>
           <div class="footer-item">
             <h3 class="footer-title">Основные ссылки</h3>
             <nav class="footer-nav">
-              <a href="index.html" class="footer-link">Меню</a>
+              <a href="#menuBurger" class="footer-link">Меню</a>
               <a href="#" class="footer-link">Заказ и Доставка</a>
               <a href="#" class="footer-link">Методы оплаты</a>
               <a href="contact.html" class="footer-link">Контакты</a>
@@ -226,7 +228,7 @@
     <div class="modal" id="modal">
       <nav class="nav _modal">
         <a href="#" class="nav-link">Главная</a>
-        <a href="index.html" class="nav-link">Меню</a>
+        <a href="#menuBurger" class="nav-link">Меню</a>
         <a href="#" class="nav-link">О нас</a>
         <a href="contact.html" class="nav-link">Контакты</a>
       </nav>

@@ -672,6 +672,7 @@ a {
 
 .modal {
   top: -400px;
+  display: none;
 }
 
 /* Media */
@@ -786,6 +787,7 @@ a {
     max-width: 500px;
     text-align: center;
     transition: var(--tr);
+    display: flex;
   }
   .modal-close {
     display: block;
@@ -908,5 +910,8 @@ a {
   }
   .menu-item._additionally .menu-info {
     flex-basis: 130px;
+  }
+  .modal {
+    display: flex;
   }
 }
