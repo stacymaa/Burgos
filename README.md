@@ -4,7 +4,7 @@
 
 **Ссылки по проекту:**
 
-- [Макет Figma](https://www.figma.com/design/8muxUNt1PwGH5byQR6LZG8/Burgers-Menu-Responsive?node-id=703-1101&t=bXKIFnn5Xvg8wV14-1)
+- [Макет Figma](https://www.figma.com/design/9AAYF36rMmHHt1FyfVJlni/Burgers-Menu-Responsive--My-Copy-?node-id=0-1&p=f&t=iTXxcbkNkACQ1wkh-0)
 - [Демо](https://stacymaa.github.io/Burgos/)
 
 **Используемые технологии:**
