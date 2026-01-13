@@ -729,7 +729,7 @@ a {
   }
   .footer {
     margin-top: 62px;
-    margin-bottom: 71px;
+    /* margin-bottom: 71px; */
   }
   .footer-nav {
     margin-bottom: 20px;
