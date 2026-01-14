@@ -682,8 +682,14 @@ a {
     gap: 40px;
   }
   .nav {
-    margin-left: 0;
     gap: min(3vw, 30px);
+  }
+}
+
+/* мои изменения */
+@media (max-width: 980px) {
+  .nav {
+    margin-left: 30px;
   }
 }
 
@@ -696,6 +702,7 @@ a {
     gap: 45px;
   }
   .nav {
+    margin-left: 0;
     gap: 22px;
   }
   .banner {
@@ -742,6 +749,21 @@ a {
   .footer-tel._mobile {
     display: block;
     text-align: left;
+  }
+}
+
+/* мои изменения */
+@media (max-width: 805px) {
+  .contact-additionally li {
+  font-size: 10px;
+  position: relative;
+  margin-top: 80px;
+  }
+  .contact-additionally li::before {
+  width: 60px;
+  height: 60px;
+  top: -65px;
+  position: absolute;
   }
 }
 
@@ -900,6 +922,32 @@ a {
   }
   .footer-nav {
     margin-bottom: 0;
+  }
+  /* мои изменения */
+  .contact-main {
+    margin: 80px auto 60px;
+  }
+  .contact-adress li span {
+  font-size: 8px;
+  }
+  .contact-adress li span:first-child {
+    font-size: 15px;
+  }
+  .contact-adress li span:last-child {
+    margin-top: 8px;
+  }
+
+  .contact-adress li:not(:last-child) {
+      margin-bottom: 16px;
+  }
+  .contact-additionally li {
+  font-size: 10px;
+  margin-top: 80px;
+  }
+  .contact-info,
+  .contact-tel {
+    font-size: 15px;
+    font-weight: 700;
   }
 }
 

@@ -17,6 +17,7 @@
     <header class="header">
       <div class="container">
         <div class="header-wrapper">
+          <button class="burger-menu" onclick="openModal()"></button>
           <div class="logo"></div>
           <nav class="nav">
             <a href="https://stacymaa.github.io/Burgos/" class="nav-link">Главная</a>
@@ -126,6 +127,12 @@
               <a href="#" class="footer-link">Методы оплаты</a>
               <a href="https://stacymaa.github.io/Burgos/contact.html" class="footer-link">Контакты</a>
             </nav>
+            <a class="footer-tel _mobile" href="tel:+79007871313"
+              >+7 900 787 13-13</a
+            >
+            <a class="footer-tel _mobile" href="tel:+79007001414"
+              >+7 900 700 14-14</a
+            >
           </div>
           <div class="footer-item">
             <h3 class="footer-title">Основная информация</h3>
@@ -148,5 +155,15 @@
         </div>
       </div>
     </footer>
+    <div class="modal" id="modal">
+      <nav class="nav _modal">
+        <a href="https://stacymaa.github.io/Burgos/" class="nav-link">Главная</a>
+        <a href="https://stacymaa.github.io/Burgos/#menuBurger" class="nav-link">Меню</a>
+        <a href="#" class="nav-link">О нас</a>
+        <a href="https://stacymaa.github.io/Burgos/contact.html" class="nav-link">Контакты</a>
+      </nav>
+      <button class="modal-close" onclick="closeModal()"></button>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
