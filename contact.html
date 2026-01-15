@@ -17,7 +17,7 @@
     <header class="header">
       <div class="container">
         <div class="header-wrapper">
-          <button class="burger-menu" onclick="openModal()"></button>
+          <button aria-label="open site navigation" class="burger-menu" onclick="openModal()"></button>
           <div class="logo"></div>
           <nav class="nav">
             <a href="https://stacymaa.github.io/Burgos/" class="nav-link">Главная</a>
@@ -51,6 +51,7 @@
         <div class="contact">
           <div class="contact-main">
             <div class="contact-map">
+              <!-- width и height у iframe лучше указывать в CSS -->
               <iframe
                 src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7c176cc3a11f3b7a30a9cbd72ea4903c642dd802d38ad12acf559afaeaecb80&amp;source=constructor"
                 width="100%"
@@ -162,7 +163,7 @@
         <a href="#" class="nav-link">О нас</a>
         <a href="https://stacymaa.github.io/Burgos/contact.html" class="nav-link">Контакты</a>
       </nav>
-      <button class="modal-close" onclick="closeModal()"></button>
+      <button aria-label="close site navigation" class="modal-close" onclick="closeModal()"></button>
     </div>
     <script src="scripts/script.js"></script>
   </body>

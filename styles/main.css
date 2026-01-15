@@ -205,7 +205,7 @@ a {
   padding-left: 0;
   color: rgba(var(--light-rgb), 0.5);
   font-size: 15px;
-  font-weight: 400px;
+  font-weight: 400;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -755,15 +755,15 @@ a {
 /* мои изменения */
 @media (max-width: 805px) {
   .contact-additionally li {
-  font-size: 10px;
-  position: relative;
-  margin-top: 80px;
+    font-size: 10px;
+    position: relative;
+    margin-top: 80px;
   }
   .contact-additionally li::before {
-  width: 60px;
-  height: 60px;
-  top: -65px;
-  position: absolute;
+    width: 60px;
+    height: 60px;
+    top: -65px;
+    position: absolute;
   }
 }
 
@@ -928,7 +928,7 @@ a {
     margin: 80px auto 60px;
   }
   .contact-adress li span {
-  font-size: 8px;
+    font-size: 8px;
   }
   .contact-adress li span:first-child {
     font-size: 15px;
@@ -938,11 +938,11 @@ a {
   }
 
   .contact-adress li:not(:last-child) {
-      margin-bottom: 16px;
+    margin-bottom: 16px;
   }
   .contact-additionally li {
-  font-size: 10px;
-  margin-top: 80px;
+    font-size: 10px;
+    margin-top: 80px;
   }
   .contact-info,
   .contact-tel {
